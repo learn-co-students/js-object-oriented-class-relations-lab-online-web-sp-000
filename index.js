@@ -14,10 +14,12 @@ class Driver {
     store.drivers.push(this);
   }
   trips() {
-    return store.trips.filter(trip => {
-      // I'm mistaken about how the format of the longhand filter.
+    return store.trips.filter(function(trip) {
+      //The LONGHAND filter must be immediately followed by ".bind(this)"
       return trip.driverId == this.id;
-    });
+    }.bind(this)
+    //The LONGHAND filter must be immediately followed by ".bind(this)"
+    );
   }
   passengers() {
     return this.trips().map(trip => {
