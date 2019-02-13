@@ -124,6 +124,7 @@ describe('relating a driver to a trip and a passenger', function() {
     driver = new Driver("Alfie")
     passenger = new Passenger("Bob")
     firstTrip = new Trip(driver, passenger)
+    // debugger
     secondPassenger = new Passenger("Susan")
     secondTrip = new Trip(driver, secondPassenger)
   });
