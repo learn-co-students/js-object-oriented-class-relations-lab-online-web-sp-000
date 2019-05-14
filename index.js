@@ -1,4 +1,4 @@
-let store = {drivers: [], passengers: [], trips: []};
+const store = {drivers: [], passengers: [], trips: []};
 
 let driverId = 0;
 let passengerId = 0;
