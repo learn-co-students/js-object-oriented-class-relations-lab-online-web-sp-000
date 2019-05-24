@@ -16,7 +16,9 @@ class Driver {
     );
   }
   passengers(){
-    return this.trips()[0].passenger() + this.trips()[1].passenger()
+    return this.trips().map(
+      trip => {return trip.passenger();}
+    );
   }
 }
 
@@ -36,7 +38,9 @@ class Passenger {
     );
   }
   drivers(){
-    return this.trips()[0].driver()
+    return this.trips().map(
+      trip => {return trip.driver();}
+    );
   }
 }
 
