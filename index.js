@@ -23,7 +23,7 @@ class Driver {
     return this.trips().map(
       function(element){
         return element.passenger();
-      }.bind(this)
+      }
     );
   }
 }
@@ -49,7 +49,7 @@ class Passenger {
     return this.trips().map(
       function(element) {
         return element.driver();
-      }.bind(this)
+      }
     );
   }
 }
