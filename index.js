@@ -21,11 +21,9 @@ class Driver {
   }
 
   passengers() {
-    const returnArray = [];
-     for(const trip of this.trips()) {
-       returnArray.push(trip.passenger())
-     }
-     return returnArray;
+    return this.trips().map(function(trip) {
+      return trip.passenger()
+    });
   }
 }
 
