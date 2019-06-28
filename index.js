@@ -22,11 +22,10 @@ class Driver {
   };
 
   passengers() {
-    let passengers = [];
-    this.trips().forEach(function(trip){
-      passengers.push(trip.passenger());
-    });
-    return passengers;
+    return this.trips().reduce(function(arr, trip){
+      arr.push(trip.passenger());
+      return arr;
+    }, []);
   };
 };
 
@@ -48,11 +47,10 @@ class Passenger {
   };
 
   drivers() {
-    let drivers = [];
-    this.trips().forEach(function(trip){
-      drivers.push(trip.driver());
-    });
-    return drivers;
+    return this.trips().reduce(function(arr, trip){
+      arr.push(trip.driver());
+      return arr;
+    }, []);
   };
 };
 
